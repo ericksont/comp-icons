@@ -5,6 +5,6 @@ COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install\
     && npm install typescript -g
 COPY . .
-RUN tsc
+RUN tsc --init
 
 CMD [ "node", "server.js" ]
